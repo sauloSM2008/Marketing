@@ -42,7 +42,7 @@
         .buy-button {
             display: inline-block;
             margin-top: 20px;
-            padding: 10px 20px;
+            padding: 15px 30px;
             background-color: #4CAF50;
             color: white;
             text-decoration: none;
@@ -52,9 +52,27 @@
             background-color: #45a049;
         }
         
+        .buybutton {
+            display: inline-block;
+            margin-top: 20px;
+            padding: 15px 30px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+        .buybutton:hover {
+            background-color: #45a049;
+        }
+        
         img {
           border-radius: 8px;
         }
+        
+        h2 {
+          color: red;
+        }
+          
     </style>
 </head>
 <body>
@@ -62,10 +80,11 @@
 <header>
     <h1>O segredo para emagrecer em 30 dias</h1>
 </header>
-
+<center><h2 id="time">..</h2></center>
 <div class="container">
     <div class="product">
         <img src="ema.jpg" alt="eBook Emagreça em 30 Dias">
+        <img src="img.jpg" alt="eBook Emagreça em 30 Dias">
         <h2>Transforme sua vida em apenas 30 dias!</h2>
         <p>Aprenda as melhores técnicas e dicas para emagrecer de forma saudável e eficaz.</p>
         <p>Este eBook inclui:</p>
@@ -75,7 +94,11 @@
             <li>Receitas saudáveis</li>
             <li>Dicas de motivação</li>
         </ul>
+        
+        <p>O melhor de tudo é que o pagamento é automático pelo m-pesa ou e-mola</p>
         <a onclick="lin()" class="buy-button" >Comprar Agora</a>
+        <p>Se tens dificuldades contacte o suporte para ajuda</p>
+        <a onclick="btn2()" class="buybutton">Suporte</a>
     </div>
 </div>
 
@@ -84,10 +107,40 @@
 </footer>
 
 <script>
+function btn2() {
+  window.open("https://wa.me/258877952248?text=Desejo uma ajuda na compra do ebook!");
+}
+
+function compra() {
+  
+}
+var timer = 5;
+var time = document.getElementById("time");
+
+
+var intervalo = setInterval(function() {
+  timer--;
+  time.textContent = `${timer}`;
+  
+  if(timer <= 0) {
+    clearInterval(intervalo);
+    time.textContent = "Indo para a página de compra...";
+    
+  }},1000);
+  
+  function compra() {
+    
+    time.textContent = "Compre já o melhor produto!";
+  }
+  
+  setTimeout(compra, 7000);
+
+
+
   function lin() {
-    window.open("https://dropaymentsmz.online/checkout?id=1728495823968");
+    window.open("https://dropaymentsmz.online/checkout?id=1728006570464");
   }
 </script>
 
 </body>
-</html>
+                                                                                              </html>
